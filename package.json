@@ -1,0 +1,16 @@
+{
+  "name": "unity.zallist.simplicit.asset-downloader",
+  "displayName": "Simplicit Game Asset Downloader",
+  "version": "1.0.0",
+  "unity": "2021.2",
+  "description": "Downloader & searcher for game assets (Poly.pizza, SketchFab)",
+  "samples": [],
+  "keywords": [
+    "asset downloader",
+    "poly.pizza"
+  ],
+  "category": "Tools",
+  "testables": [],
+  "relatedPackages": {},
+  "repository": {}
+}
