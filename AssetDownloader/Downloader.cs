@@ -54,7 +54,8 @@ namespace SimplicitEditor.AssetDownloader
             if (!string.IsNullOrEmpty(AssetDatabase.AssetPathToGUID(outputDirectory))) 
             {
                 Selection.activeObject = AssetDatabase.LoadMainAssetAtPath(outputDirectory);
-                ProjectWindowUtil.ShowCreatedAsset(Selection.activeObject);
+                EditorGUIUtility.PingObject(Selection.activeObject);
+                //ProjectWindowUtil.ShowCreatedAsset(Selection.activeObject);
 
                 var @continue = EditorUtility.DisplayDialog("Asset already exists", $"An asset already exists at {outputDirectory}. Continue downloading this one in a unique directory?",
                     "Continue Downloading", "Cancel");
