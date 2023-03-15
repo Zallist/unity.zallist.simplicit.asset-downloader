@@ -138,7 +138,6 @@ namespace SimplicitEditor.AssetDownloader
                     pageReq.Dispose();
                 }
             };
-
         }
 
         private void HandlePageRequest(string text, string folderPath, string url)
@@ -189,7 +188,7 @@ namespace SimplicitEditor.AssetDownloader
             set => EditorPrefs.SetString($"{nameof(PolyPizzaUrlDownloader)}_{nameof(LastHandledPolyPizzaUrl)}", value);
         }
 
-        private static readonly System.Text.RegularExpressions.Regex urlRegex = new(@"(?:\b|^) (?<url>https://poly.pizza/m/.+) (?:\s|,|\.|$)", 
+        private static readonly System.Text.RegularExpressions.Regex urlRegex = new(@"(?:\b|^) (?<url>https://poly.pizza/m/.+) (?:\s|,|\.|$)",
             System.Text.RegularExpressions.RegexOptions.Compiled | System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace | System.Text.RegularExpressions.RegexOptions.IgnoreCase);
 
         private static void ClipboardListener()

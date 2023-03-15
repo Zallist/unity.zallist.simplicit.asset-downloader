@@ -142,7 +142,7 @@ namespace SimplicitEditor.AssetDownloader
             set => EditorPrefs.SetString($"{nameof(GenericGameModelDownloader)}_{nameof(LastHandledPayload)}", value);
         }
 
-        private static readonly System.Text.RegularExpressions.Regex payloadRegex = new(PAYLOAD_PREFIX + @"(?<payload>\{.+\})$", 
+        private static readonly System.Text.RegularExpressions.Regex payloadRegex = new(PAYLOAD_PREFIX + @"(?<payload>\{.+\})$",
             System.Text.RegularExpressions.RegexOptions.Compiled | System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace | System.Text.RegularExpressions.RegexOptions.IgnoreCase);
 
         private static void ClipboardListener()
@@ -183,6 +183,5 @@ namespace SimplicitEditor.AssetDownloader
         {
             System.Diagnostics.Process.Start("https://greasyfork.org/en/scripts/454630-sketchfab-unity-asset-payload-creator");
         }
-
     }
 }

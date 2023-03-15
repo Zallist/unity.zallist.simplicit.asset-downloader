@@ -51,7 +51,7 @@ namespace SimplicitEditor.AssetDownloader
 
             outputDirectory = $"{outputDirectory}{payload.Name}";
 
-            if (!string.IsNullOrEmpty(AssetDatabase.AssetPathToGUID(outputDirectory))) 
+            if (!string.IsNullOrEmpty(AssetDatabase.AssetPathToGUID(outputDirectory)))
             {
                 Selection.activeObject = AssetDatabase.LoadMainAssetAtPath(outputDirectory);
                 EditorGUIUtility.PingObject(Selection.activeObject);
